@@ -71,11 +71,21 @@ inside:
       Bag. You will not need to focus on this implementation in this exercise.
    - `LongestCommonSubsequence.java` provides the skeleton of a LCS solution.
 
-   If you `cd` into `app/src/main/java/`, you can compile and run this code in the manual
-   way like you did with Recitation 1. In particular, use the following commands:
+   If you `cd` into `app/src/main/java/`, you can compile and run this code in
+   the manual way like you did with Recitation 1. In particular, use the
+   following commands:
 
        javac cs445/rec2/LongestCommonSubsequence.java
        java cs445.rec2.LongestCommonSubsequence
+
+   Alternatively, you can use `./gradlew run` (on Unix-like terminals such as
+   those found on Mac, Linux, or Windows Subsystem for Linux) or `gradlew.bat
+   run` (on DOS-like terminals such as the more traditional Windows terminal) to
+   compile and run the program automatically using gradle. Use `gradle clean` to
+   remove all of the generated files (such as `.class` files).
+
+   (Note that the starter code will not compile and run until you complete the
+   exercise.)
 
 2. Review the following algorithm that finds the LCS of two input strings. This
 algorithm takes a brute force approach of generating all possible subsequences
