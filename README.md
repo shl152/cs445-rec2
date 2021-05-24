@@ -82,7 +82,9 @@ inside:
    those found on Mac, Linux, or Windows Subsystem for Linux) or `gradlew.bat
    run` (on DOS-like terminals such as the more traditional Windows terminal) to
    compile and run the program automatically using gradle. Use `gradle clean` to
-   remove all of the generated files (such as `.class` files).
+   remove all of the generated files (such as `.class` files). Nothing extra
+   needs to be installed for this to work; the included gradle wrapper will
+   automatically download a copy of the tool if needed.
 
    (Note that the starter code will not compile and run until you complete the
    exercise.)
@@ -132,23 +134,23 @@ variable `possibleSubsequences`, and add the string `first` to the bag.
 7. Test the program to be sure it works. Below are pairs of strings and their
 correct longest common subsequence:
 
-  | First | Second      | LCS
-  | ----- | -----       | -----
-  | D     | ABC         |
-  | AA    | ABA         | AA
-  | AA    | AAA         | AA
-  | AABC  | ABBC        | ABC
-  | ABBC  | ABCC        | ABC
-  | ABCC  | CABAC       | ABC
-  | ABA   | AA          | AA
-  | ABC   | CBACBA      | AB or BC or AC
-  | ABC   | CBACBACBA   | ABC
-  | ABC   | BCABCA      | ABC
-  | ABCD  | DCBADCBA    | AB or AC or AD or BC or BD or CD
-  | ABFCD | ADBAFDCBA   | ABFC or ABFD
-  | ABFCD | ADBADCBA    | ABC or ABD
-  | ABCDF | ADBADCBA    | ABC or ABD
-  | ABADA | BADABAABDBA | ABADA
+   | First | Second      | LCS
+   | ----- | -----       | -----
+   | D     | ABC         |
+   | AA    | ABA         | AA
+   | AA    | AAA         | AA
+   | AABC  | ABBC        | ABC
+   | ABBC  | ABCC        | ABC
+   | ABCC  | CABAC       | ABC
+   | ABA   | AA          | AA
+   | ABC   | CBACBA      | AB or BC or AC
+   | ABC   | CBACBACBA   | ABC
+   | ABC   | BCABCA      | ABC
+   | ABCD  | DCBADCBA    | AB or AC or AD or BC or BD or CD
+   | ABFCD | ADBAFDCBA   | ABFC or ABFD
+   | ABFCD | ADBADCBA    | ABC or ABD
+   | ABCDF | ADBADCBA    | ABC or ABD
+   | ABADA | BADABAABDBA | ABADA
 
 ## Conclusion
 
