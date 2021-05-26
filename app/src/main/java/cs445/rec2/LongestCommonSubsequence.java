@@ -17,7 +17,7 @@ public class LongestCommonSubsequence {
         // and assign it a value of null
 
         if (args.length != 2) {
-            System.out.println("Type two strings as command-line arguments.");
+            System.out.println("Type two strings as command-line arguments. Use --args \"first second\" if using gradle.");
             return;
         }
 
