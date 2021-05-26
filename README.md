@@ -89,9 +89,15 @@ inside:
    - `gradlew.bat run` (on DOS-like terminals such as the more traditional
      Windows terminal)
 
-   Use `gradle clean` to remove all of the generated files (such as `.class`
-   files). Nothing extra needs to be installed for this to work; the included
-   gradle wrapper will automatically download a copy of the tool if needed.
+   You can add `--args "first second"` at the end of the command to pass command
+   line arguments `first` and `second` to `LongestCommonSubsequence`. See the
+   gradle-adapted version of Recitation 1 for other examples of the `--args`
+   flag.
+
+   You can also use replace `run` with `clean` to remove all of the generated
+   files (such as `.class` files). Nothing extra needs to be installed for these
+   commands to work; the included gradle wrapper will automatically download a
+   copy of the tool if needed.
 
    (Note that the starter code will not compile and run until you complete the
    exercise.)
@@ -119,19 +125,21 @@ learn in CS 1501).
                Print the bag of strings that still need to be checked, for debugging
            Print out the longest subsequence
 
+   To demonstrate how to generate new strings from a test string ("by removing a
+   different single character each time"), consider the following example. If
+   the test string you removed from the bag is `ABCD`, you want to add each of
+   `BCD`, `ACD`, `ABD`, and `ABC` (all subsequences that are 1 character
+   shorter).
+
    Note that `LongestCommonSubsequence.java` already contains a method,
-   `isSubsequence`, to check whether one string is a subsequence of another. To
-   demonstrate how to generate new strings from a test string, consider the
-   following example. If the string you removed from the bag is `ABCD`, you want
-   to add each of `BCD`, `ACD`, `ABD`, and `ABC` (all subsequences that are 1
-   character shorter).
+   `isSubsequence`, to check whether one string is a subsequence of another.
 
 3. Once you understand the algorithm from Step 2, read through
 `LongestCommonSubsequence.java`, noting the 3 `TODO` comments. You will need to
 complete these portions of the code.
 
-4. At the first `TODO` comment, create a new reference variable named `possibleSubsequences`
-for storing the bag and it assign it a value of `null`.
+4. At the first `TODO` comment, create a new reference variable named
+`possibleSubsequences` for storing the bag and it assign it a value of `null`.
 
 5. At the second `TODO` comment, create a new bag of strings, assign it to the
 variable `possibleSubsequences`, and add the string `first` to the bag.
@@ -161,8 +169,9 @@ correct longest common subsequence:
 
 ## Conclusion
 
-In this lab, you wrote client code using the ADT Bag to solve the LCS problem.
-Writing client code is a crucial skill in Data Structures. Throughout the term,
-you should take the time to practice writing code that uses the data structures
-presented, to improve your skills in solving problems using the (often limited
-set of) operations available to you.
+In this exercise, you wrote client code using the ADT Bag to solve the LCS
+problem. Writing client code is a crucial skill in Algorithms and Data
+Structures 1 (and moving forward in your programming career). Throughout the
+term, you should take the time to practice writing code that uses the data
+structures presented, to improve your skills in solving problems using the
+(often limited set of) operations available to you.
