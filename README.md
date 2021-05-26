@@ -66,7 +66,8 @@ be found in `app/src/main/java/`. Navigate to this subdirectory, then into the
 `cs445/rec2/` package folder within it, and note the following Java files
 inside:
 
-   - `BagInterface.java` is a Java interface representing the ADT Bag.
+   - `BagInterface.java` is a Java interface representing the ADT Bag. It is a
+     slightly expanded version of what we developed in lecture.
    - `ArrayBag.java` is a dynamic capacity array-based implementation of ADT
       Bag. You will not need to focus on this implementation in this exercise.
    - `LongestCommonSubsequence.java` provides the skeleton of a LCS solution.
@@ -78,13 +79,19 @@ inside:
        javac cs445/rec2/LongestCommonSubsequence.java
        java cs445.rec2.LongestCommonSubsequence
 
-   Alternatively, you can use `./gradlew run` (on Unix-like terminals such as
-   those found on Mac, Linux, or Windows Subsystem for Linux) or `gradlew.bat
-   run` (on DOS-like terminals such as the more traditional Windows terminal) to
-   compile and run the program automatically using gradle. Use `gradle clean` to
-   remove all of the generated files (such as `.class` files). Nothing extra
-   needs to be installed for this to work; the included gradle wrapper will
-   automatically download a copy of the tool if needed.
+   However, a simpler alternative is available thanks to the gradle build tool.
+   From the root of the repository (i.e., *without* navigating to
+   `app/src/main/java/`), you can use one of the following commands to compile
+   and run the program automatically using gradle:
+
+   - `./gradlew run` (on Unix-like terminals such as those found on Mac, Linux,
+     or Windows Subsystem for Linux)
+   - `gradlew.bat run` (on DOS-like terminals such as the more traditional
+     Windows terminal)
+
+   Use `gradle clean` to remove all of the generated files (such as `.class`
+   files). Nothing extra needs to be installed for this to work; the included
+   gradle wrapper will automatically download a copy of the tool if needed.
 
    (Note that the starter code will not compile and run until you complete the
    exercise.)
