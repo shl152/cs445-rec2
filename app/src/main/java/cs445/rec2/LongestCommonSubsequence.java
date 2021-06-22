@@ -15,6 +15,7 @@ public class LongestCommonSubsequence {
 
         // TODO: Create reference a variable named possibleSubsequences for storing the bag
         // and assign it a value of null
+        BagInterface<String> possibleSubsequences=null;
 
         if (args.length != 2) {
             System.out.println("Type two strings as command-line arguments. Use --args \"first second\" if using gradle.");
@@ -24,16 +25,48 @@ public class LongestCommonSubsequence {
         String first = args[0];
         String second = args[1];
 
-        // TODO: Add code here to create the bag and add the initial string
+        // TODO: Add code here to create the bag and add the initial string (first)
+        possibleSubsequences= new ArrayBag<String>();
+        possibleSubsequences.add(first);
 
         System.out.println("The string bag contains: " + possibleSubsequences);
         String longest = new String("");
 
         // TODO: Add code here to implement the longest common subsequence
         // algorithm
+        //While the bag is not empty:
+        while(!possibleSubsequences.isEmpty()){
+        //Remove a string from the bag, call it test
+           String test=possibleSubsequences.remove();
+        //If longest is shorter than test:
+            if (longest.length()<test.length()){
+            //If test is a subsequence of second:
+              if (isSubsequence(test,second)){
+                   longest=test;
+                   //Set longest to test
+                  }
+              
+              //Otherwise, if test is at least 2 characters longer than longest:
+              else if (test.length()>longest.length()+1){
+              //Generate new strings from test by removing a different single
+                //character each time.
+                 for(int i=0;i<test.length();i++){
+                 String next=test.substring(0,i)+test.substring(i+1);
+                 possibleSubsequences.add(next);
+                 }
+             }
+         }
+            }
+                
+                
+                //Add each of the newly-generated strings to the bag.
+        //Print the bag of strings that still need to be checked, for debugging
+    //Print out the longest subsequence
+     System.out.println("Longest common subsequence:");
+     System.out.println(longest);
+      
 
-        System.out.println("Longest common subsequence:");
-        System.out.println(longest);
+       
 
     }
 
